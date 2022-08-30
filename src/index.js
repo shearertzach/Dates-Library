@@ -96,4 +96,37 @@ class D {
     }
     return formattedDate
   }
+
+  when() {
+    const now = new Date()
+
+    if (this._date > now) {
+      const y = this._date.getFullYear() - now.getFullYear()
+      const m = this._date.getMonth() - now.getMonth()
+      const d = this._date.getDate() - now.getDate()
+
+      if (y > 0) {
+        return `${y} year(s) from now`
+      } else if (m > 0) {
+        return `${m} month(s) from now`
+      } else {
+        return `${d} day(s) from now`
+      }
+    } else if (this._date < now) {
+      const y = now.getFullYear() - this._date.getFullYear()
+      const m = now.getMonth() - this._date.getMonth()
+      const d = now.getDate() - this._date.getDate()
+
+      if (y > 0) {
+        return `${y} year(s) ago`
+      } else if (m > 0) {
+        return `${m} month(s) ago`
+      } else {
+        return `${d} day(s) ago`
+      }
+    } else {
+      return 'Today'
+    }
+
+  }
 }
