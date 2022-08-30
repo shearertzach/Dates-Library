@@ -37,6 +37,11 @@ class D {
     return this._date.getSeconds()
   }
 
+  /** 
+   * This function formats the date with a given strings.
+   * @param {String} "M/D/Y H:I"
+   * @returns {String} "4 Year(s) from now"
+   */
   formatDate(format) {
     if (typeof (format) != "string") return
     const formats = format.split('')
@@ -97,6 +102,10 @@ class D {
     return formattedDate
   }
 
+  /** 
+   * This function gives you a rough estimate of when the date occurred.
+   * @returns {String} "4 Year(s) from now"
+   */
   when() {
     const now = new Date()
 
@@ -127,6 +136,7 @@ class D {
     } else {
       return 'Today'
     }
-
   }
 }
+
+export default D
