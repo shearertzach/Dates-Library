@@ -40,7 +40,7 @@ class D {
   /** 
    * This function formats the date with a given strings.
    * @param {String} "M/D/Y H:I"
-   * @returns {String} "4 Year(s) from now"
+   * @returns {String} "May 27, 2002"
    */
   formatDate(format) {
     if (typeof (format) != "string") return
@@ -139,4 +139,4 @@ class D {
   }
 }
 
-export default D
+module.exports = D
