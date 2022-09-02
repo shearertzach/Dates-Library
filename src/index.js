@@ -87,7 +87,6 @@ class D {
           break
         case "S":
           const secs = this.secs.toString()
-          console.log(secs.length)
           if (secs.length > 1) formattedDate = formattedDate + secs
           else formattedDate = formattedDate + `0${secs}`
           break

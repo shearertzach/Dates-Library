@@ -1,6 +1,8 @@
 const D = require('../src/index')
 
 const aDayInAugust = new D('August/7/2022 11:52:30')
+const aDayInSeptember = new D('September/23/2022 07:08:03')
+
 const bday = new D(`May/27/2002`)
 
 test('should be birthyear', () => {
@@ -49,4 +51,8 @@ test('should be my bday formatted', () => {
 
 test('should be a day in august formatted', () => {
   expect(aDayInAugust.formatDate('m d y | H:I:S')).toBe('Aug 07 22 | 11:52:30')
+})
+
+test('should be a day in september formatted ', () => {
+  expect(aDayInSeptember.formatDate('M D Y | h:i:s')).toBe('September 23 2022 | 7:8:3')
 })
