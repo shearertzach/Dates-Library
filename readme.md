@@ -4,6 +4,14 @@ This utility library makes it easy to work with dates.
 
 <!-- > -->
 
+## Installation
+
+```bash
+npm install @zach-shearer/dates-library
+```
+
+<!-- > -->
+
 ## Class Atributes
 
 ```JS
